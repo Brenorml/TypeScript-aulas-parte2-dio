@@ -1,15 +1,13 @@
 "use strict";
-let valorAny;
-valorAny = 1;
-valorAny = 'ola';
-valorAny = true;
-//todas tipagens aceitas no valorAny
-let valorString = 'teste';
-valorString = valorAny;
-let valorString2 = 'testao';
-valorString2 = valorAny;
-function somarString(string1, string2) {
-    console.log(string1 + string2);
+//notação muito grande nos tipos dos inputs
+function somarValores(input1, input2) {
+    if (typeof input1 === "string" || typeof input2 === "string") {
+        return input1.toString() + input2.toString();
+    }
+    else {
+        return input1 + input2;
+    }
 }
-somarString(valorString, valorString2);
-somarString('ola ', ', como vai?');
+console.log(somarValores(1, 5));
+console.log(somarValores('ola', ', tudo bem?'));
+console.log(somarValores('Hoje é dia? ', 5));
