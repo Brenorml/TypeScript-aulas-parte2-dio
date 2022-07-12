@@ -1,0 +1,26 @@
+{
+  "name": "intro-typescript",
+  "version": "1.0.0",
+  "description": "Conteudo adicional relativo as aulas de TypeScript do BootCamp Santander 2022 na DIO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brenorml/TypeScript-aulas-parte2-dio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brenorml/TypeScript-aulas-parte2-dio/issues"
+  },
+  "homepage": "https://github.com/Brenorml/TypeScript-aulas-parte2-dio#readme",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
