@@ -1,21 +1,54 @@
 "use strict";
-let button = document.getElementById('button');
-let input1 = document.getElementById('input1');
-let input2 = document.getElementById('input2');
-function adicionarNumeros(num1, num2, devePrintar, frase) {
-    let resultado = num1 + num2;
-    if (devePrintar) {
-        console.log(frase + resultado);
+const pessoa = {
+    nome: 'Mariana',
+    idade: 28,
+    profissao: 'desenvolvedora'
+};
+pessoa.idade = 25;
+const andre = {
+    nome: 'Andre',
+    idade: 25,
+    profissao: 'pintor'
+};
+const paula = {
+    nome: 'Paula',
+    idade: 25,
+    profissao: 'Desenvolvedora'
+};
+var Profissao;
+(function (Profissao) {
+    Profissao[Profissao["Professora"] = 0] = "Professora";
+    Profissao[Profissao["Atriz"] = 1] = "Atriz";
+    Profissao[Profissao["Desenvolvedora"] = 2] = "Desenvolvedora";
+    Profissao[Profissao["JogadoraDeFutebol"] = 3] = "JogadoraDeFutebol";
+})(Profissao || (Profissao = {}));
+;
+;
+const vanessa = {
+    nome: 'Vanessa',
+    idade: 23,
+    profissao: Profissao.Desenvolvedora
+};
+const maria = {
+    nome: 'maria',
+    idade: 23,
+    profissao: Profissao.Desenvolvedora
+};
+const jessica = {
+    nome: 'Jessica',
+    idade: 28,
+    profissao: Profissao.Desenvolvedora,
+    materias: ['Matemática discreta', 'Programação']
+};
+const monica = {
+    nome: 'Jessica',
+    idade: 28,
+    //profissao: Profissao.Desenvolvedora, - Pode ser retirada pois se tornou opcional ao acrescentar ? na interface pessoa
+    materias: ['Matemática discreta', 'Programação']
+};
+function listar(lista) {
+    for (const item of lista) {
+        console.log('- ', item);
     }
-    return num1 + num2;
 }
-let devePrintar = true;
-let frase;
-frase = 'O valor é: ';
-if (button) {
-    button.addEventListener('click', () => {
-        if (input1 && input2) {
-            console.log(adicionarNumeros(Number(input1.value), Number(input2.value), devePrintar, frase));
-        }
-    });
-}
+listar(monica.materias);
